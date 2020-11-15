@@ -1,0 +1,292 @@
+\hypertarget{text_8h}{}\doxysection{text.\+h File Reference}
+\label{text_8h}\index{text.h@{text.h}}
+
+
+Header file with description of functions and structures.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$locale.\+h$>$}\newline
+{\ttfamily \#include $<$wctype.\+h$>$}\newline
+{\ttfamily \#include $<$wchar.\+h$>$}\newline
+Include dependency graph for text.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__line__}{\+\_\+line\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Struct that store wide character line and its length. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct__text__}{\+\_\+text\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Struct that store text and its info. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{text_8h_acf1c58fbef093a9a5c1711151739a33a}\label{text_8h_acf1c58fbef093a9a5c1711151739a33a}} 
+\#define {\bfseries P\+I\+E\+C\+E\+\_\+\+O\+F\+\_\+\+S\+H\+IT}~160
+\item 
+\mbox{\Hypertarget{text_8h_ac7c0207aa5a0e10d378be03b68041350}\label{text_8h_ac7c0207aa5a0e10d378be03b68041350}} 
+\#define {\bfseries M\+A\+X\+\_\+\+N\+A\+ME}~64
+\item 
+\mbox{\Hypertarget{text_8h_ab5889105dcd019008c9448dff61323f6}\label{text_8h_ab5889105dcd019008c9448dff61323f6}} 
+\#define {\bfseries I\+N\+IT}~7777777
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{text_8h_a9841b4ee80533b062d59b35f9bd80ccf}\label{text_8h_a9841b4ee80533b062d59b35f9bd80ccf}} 
+typedef struct \mbox{\hyperlink{struct__line__}{\+\_\+line\+\_\+}} \mbox{\hyperlink{text_8h_a9841b4ee80533b062d59b35f9bd80ccf}{Line}}
+\begin{DoxyCompactList}\small\item\em Struct that store wide character line and its length. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{text_8h_aaaf918c4e9a83699029d39b54b7df4a6}\label{text_8h_aaaf918c4e9a83699029d39b54b7df4a6}} 
+typedef struct \mbox{\hyperlink{struct__text__}{\+\_\+text\+\_\+}} \mbox{\hyperlink{text_8h_aaaf918c4e9a83699029d39b54b7df4a6}{Text}}
+\begin{DoxyCompactList}\small\item\em Struct that store text and its info. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{text_8h_a84723d244c272f0cc0523c54b1de178d}\label{text_8h_a84723d244c272f0cc0523c54b1de178d}} 
+typedef int($\ast$ \mbox{\hyperlink{text_8h_a84723d244c272f0cc0523c54b1de178d}{is\+\_\+letter\+\_\+t}}) (wchar\+\_\+t)
+\begin{DoxyCompactList}\small\item\em The type of functions that defines letter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{text_8h_a5bdd61a9388ad20dedbcf5b4779eccef}\label{text_8h_a5bdd61a9388ad20dedbcf5b4779eccef}} 
+typedef int($\ast$ \mbox{\hyperlink{text_8h_a5bdd61a9388ad20dedbcf5b4779eccef}{letters\+\_\+cmp\+\_\+t}}) (wchar\+\_\+t, wchar\+\_\+t)
+\begin{DoxyCompactList}\small\item\em The type of functions that compares letters. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{text_8h_a8f0df8fd28deafaa5a35555f06ab57c2}\label{text_8h_a8f0df8fd28deafaa5a35555f06ab57c2}} 
+typedef int($\ast$ \mbox{\hyperlink{text_8h_a8f0df8fd28deafaa5a35555f06ab57c2}{lines\+\_\+cmp\+\_\+t}}) (\mbox{\hyperlink{text_8h_a9841b4ee80533b062d59b35f9bd80ccf}{Line}}, \mbox{\hyperlink{text_8h_a9841b4ee80533b062d59b35f9bd80ccf}{Line}}, \mbox{\hyperlink{text_8h_a84723d244c272f0cc0523c54b1de178d}{is\+\_\+letter\+\_\+t}}, \mbox{\hyperlink{text_8h_a5bdd61a9388ad20dedbcf5b4779eccef}{letters\+\_\+cmp\+\_\+t}})
+\begin{DoxyCompactList}\small\item\em The type of functions that compares lines. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{text_8h_a622ccac4bed4b5ffcfd1acea83629286}\label{text_8h_a622ccac4bed4b5ffcfd1acea83629286}} 
+enum \mbox{\hyperlink{text_8h_a622ccac4bed4b5ffcfd1acea83629286}{E\+R\+R\+O\+RS}} \{ \newline
+{\bfseries B\+A\+D\+\_\+\+F\+I\+LE} = 1, 
+{\bfseries B\+A\+D\+\_\+\+E\+N\+C\+O\+D\+I\+NG} = 2, 
+{\bfseries B\+A\+D\+\_\+\+P\+O\+I\+N\+T\+ER} = 3, 
+{\bfseries B\+A\+D\+\_\+\+N\+A\+ME} = 4, 
+\newline
+{\bfseries M\+E\+M\+O\+R\+Y\+\_\+\+T\+R\+O\+U\+B\+LE} = 5, 
+{\bfseries R\+E\+A\+D\+I\+N\+G\+\_\+\+T\+R\+O\+U\+B\+LE} = 6, 
+{\bfseries L\+O\+G\+I\+C\+\_\+\+T\+R\+O\+U\+B\+LE} = 7
+ \}
+\begin{DoxyCompactList}\small\item\em Error codes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{text_8h_a42240075e95fc1136dd8fd8345fba625}{read\+\_\+text}} (\mbox{\hyperlink{text_8h_aaaf918c4e9a83699029d39b54b7df4a6}{Text}} $\ast$text\+\_\+pointer, const char $\ast$file\+\_\+name)
+\item 
+int \mbox{\hyperlink{text_8h_ac80eb2ab88e6a3d83c5f024d48bdd9b5}{write\+\_\+text}} (\mbox{\hyperlink{text_8h_aaaf918c4e9a83699029d39b54b7df4a6}{Text}} text, const char $\ast$file\+\_\+name)
+\item 
+int \mbox{\hyperlink{text_8h_a6921d650d0cf2fa005070d58198646e8}{format\+\_\+text}} (\mbox{\hyperlink{text_8h_aaaf918c4e9a83699029d39b54b7df4a6}{Text}} $\ast$text\+\_\+pointer, \mbox{\hyperlink{text_8h_a84723d244c272f0cc0523c54b1de178d}{is\+\_\+letter\+\_\+t}})
+\item 
+void \mbox{\hyperlink{text_8h_ac698ce5f3d1c983128b6f77b6dd0ffd7}{free\+\_\+text}} (\mbox{\hyperlink{text_8h_aaaf918c4e9a83699029d39b54b7df4a6}{Text}} $\ast$text\+\_\+pointer)
+\item 
+void \mbox{\hyperlink{text_8h_a83acb3d9c928dbb06b2398b3a0bd557e}{sort\+\_\+lines}} (\mbox{\hyperlink{text_8h_a9841b4ee80533b062d59b35f9bd80ccf}{Line}} $\ast$lines, size\+\_\+t lines\+\_\+amt, \mbox{\hyperlink{text_8h_a8f0df8fd28deafaa5a35555f06ab57c2}{lines\+\_\+cmp\+\_\+t}}, \mbox{\hyperlink{text_8h_a84723d244c272f0cc0523c54b1de178d}{is\+\_\+letter\+\_\+t}}, \mbox{\hyperlink{text_8h_a5bdd61a9388ad20dedbcf5b4779eccef}{letters\+\_\+cmp\+\_\+t}})
+\item 
+int \mbox{\hyperlink{text_8h_af78e6d03fb1f2413a0cb749dd0d32a62}{lines\+\_\+cmp}} (\mbox{\hyperlink{text_8h_a9841b4ee80533b062d59b35f9bd80ccf}{Line}} str1, \mbox{\hyperlink{text_8h_a9841b4ee80533b062d59b35f9bd80ccf}{Line}} str2, \mbox{\hyperlink{text_8h_a84723d244c272f0cc0523c54b1de178d}{is\+\_\+letter\+\_\+t}}, \mbox{\hyperlink{text_8h_a5bdd61a9388ad20dedbcf5b4779eccef}{letters\+\_\+cmp\+\_\+t}})
+\item 
+int \mbox{\hyperlink{text_8h_a09618083b8df27caa78196c6af488a8d}{rev\+\_\+lines\+\_\+cmp}} (\mbox{\hyperlink{text_8h_a9841b4ee80533b062d59b35f9bd80ccf}{Line}} str1, \mbox{\hyperlink{text_8h_a9841b4ee80533b062d59b35f9bd80ccf}{Line}} str2, \mbox{\hyperlink{text_8h_a84723d244c272f0cc0523c54b1de178d}{is\+\_\+letter\+\_\+t}}, \mbox{\hyperlink{text_8h_a5bdd61a9388ad20dedbcf5b4779eccef}{letters\+\_\+cmp\+\_\+t}})
+\item 
+int \mbox{\hyperlink{text_8h_a85e0cb00c9a50457ebf84b465c08decd}{letters\+\_\+cmp\+\_\+en}} (wchar\+\_\+t c1, wchar\+\_\+t c2)
+\item 
+int \mbox{\hyperlink{text_8h_aabf2527a44b00ab9a0e5045b7a6cbb70}{letters\+\_\+cmp\+\_\+ru}} (wchar\+\_\+t c1, wchar\+\_\+t c2)
+\item 
+int \mbox{\hyperlink{text_8h_a74d547b6f1370962e36da8083f9f517c}{is\+\_\+letter\+\_\+ru}} (wchar\+\_\+t c)
+\item 
+int \mbox{\hyperlink{text_8h_a0a08f0fd36b544bc308e22fbf4970c57}{is\+\_\+letter\+\_\+en}} (wchar\+\_\+t c)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file with description of functions and structures. 
+
+\begin{DoxyAuthor}{Author}
+Saint\+Aleksei 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 2020
+\end{DoxyDate}
+This file contains\+: Some helpful defines; The definition of structures Text ({\itshape text}) and Line ({\itshape line}); The definition of all functions; 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{text_8h_a6921d650d0cf2fa005070d58198646e8}\label{text_8h_a6921d650d0cf2fa005070d58198646e8}} 
+\index{text.h@{text.h}!format\_text@{format\_text}}
+\index{format\_text@{format\_text}!text.h@{text.h}}
+\doxysubsubsection{\texorpdfstring{format\_text()}{format\_text()}}
+{\footnotesize\ttfamily int format\+\_\+text (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{text_8h_aaaf918c4e9a83699029d39b54b7df4a6}{Text}} $\ast$}]{text\+\_\+pointer,  }\item[{\mbox{\hyperlink{text_8h_a84723d244c272f0cc0523c54b1de178d}{is\+\_\+letter\+\_\+t}}}]{ }\end{DoxyParamCaption})}
+
+This function is responsible for text formatting 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em text\+\_\+pointer} & A pointer to a Text variable that will be formatted \\
+\hline
+\mbox{\texttt{ in}}  & {\em is\+\_\+letter\+\_\+t} & Function that defines a letter in a text \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Zero on success and error code otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{text_8h_ac698ce5f3d1c983128b6f77b6dd0ffd7}\label{text_8h_ac698ce5f3d1c983128b6f77b6dd0ffd7}} 
+\index{text.h@{text.h}!free\_text@{free\_text}}
+\index{free\_text@{free\_text}!text.h@{text.h}}
+\doxysubsubsection{\texorpdfstring{free\_text()}{free\_text()}}
+{\footnotesize\ttfamily void free\+\_\+text (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{text_8h_aaaf918c4e9a83699029d39b54b7df4a6}{Text}} $\ast$}]{text\+\_\+pointer }\end{DoxyParamCaption})}
+
+This function is responsible for freeing text 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em text\+\_\+pointer} & A pointer to a Text variable that will be freed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{text_8h_a0a08f0fd36b544bc308e22fbf4970c57}\label{text_8h_a0a08f0fd36b544bc308e22fbf4970c57}} 
+\index{text.h@{text.h}!is\_letter\_en@{is\_letter\_en}}
+\index{is\_letter\_en@{is\_letter\_en}!text.h@{text.h}}
+\doxysubsubsection{\texorpdfstring{is\_letter\_en()}{is\_letter\_en()}}
+{\footnotesize\ttfamily int is\+\_\+letter\+\_\+en (\begin{DoxyParamCaption}\item[{wchar\+\_\+t}]{c }\end{DoxyParamCaption})}
+
+This function defines english letter 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em c} & Any symbol in unicode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if c is english letter and zero otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{text_8h_a74d547b6f1370962e36da8083f9f517c}\label{text_8h_a74d547b6f1370962e36da8083f9f517c}} 
+\index{text.h@{text.h}!is\_letter\_ru@{is\_letter\_ru}}
+\index{is\_letter\_ru@{is\_letter\_ru}!text.h@{text.h}}
+\doxysubsubsection{\texorpdfstring{is\_letter\_ru()}{is\_letter\_ru()}}
+{\footnotesize\ttfamily int is\+\_\+letter\+\_\+ru (\begin{DoxyParamCaption}\item[{wchar\+\_\+t}]{c }\end{DoxyParamCaption})}
+
+This function defines russian letter 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em c} & Any symbol in unicode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if c is russian letter and zero otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{text_8h_a85e0cb00c9a50457ebf84b465c08decd}\label{text_8h_a85e0cb00c9a50457ebf84b465c08decd}} 
+\index{text.h@{text.h}!letters\_cmp\_en@{letters\_cmp\_en}}
+\index{letters\_cmp\_en@{letters\_cmp\_en}!text.h@{text.h}}
+\doxysubsubsection{\texorpdfstring{letters\_cmp\_en()}{letters\_cmp\_en()}}
+{\footnotesize\ttfamily int letters\+\_\+cmp\+\_\+en (\begin{DoxyParamCaption}\item[{wchar\+\_\+t}]{c1,  }\item[{wchar\+\_\+t}]{c2 }\end{DoxyParamCaption})}
+
+This function is compare two englsih letters 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em c1} & First letter in unicode \\
+\hline
+\mbox{\texttt{ in}}  & {\em c2} & Second letter in unicode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Positive integer if c1 \char`\"{}more\char`\"{} than c2, negative integer otherwise and zero if they are the same 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+if c1 or c2 aren\textquotesingle{}t english letters behavior undefined 
+\end{DoxyWarning}
+\mbox{\Hypertarget{text_8h_aabf2527a44b00ab9a0e5045b7a6cbb70}\label{text_8h_aabf2527a44b00ab9a0e5045b7a6cbb70}} 
+\index{text.h@{text.h}!letters\_cmp\_ru@{letters\_cmp\_ru}}
+\index{letters\_cmp\_ru@{letters\_cmp\_ru}!text.h@{text.h}}
+\doxysubsubsection{\texorpdfstring{letters\_cmp\_ru()}{letters\_cmp\_ru()}}
+{\footnotesize\ttfamily int letters\+\_\+cmp\+\_\+ru (\begin{DoxyParamCaption}\item[{wchar\+\_\+t}]{c1,  }\item[{wchar\+\_\+t}]{c2 }\end{DoxyParamCaption})}
+
+This function is compare two russian letters 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em c1} & First letter in unicode \\
+\hline
+\mbox{\texttt{ in}}  & {\em c2} & Second letter in unicode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Positive integer if c1 \char`\"{}more\char`\"{} than c2, negative integer otherwise and zero if they are the same 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+if c1 or c2 aren\textquotesingle{}t russian letters behavior undefined 
+\end{DoxyWarning}
+\mbox{\Hypertarget{text_8h_af78e6d03fb1f2413a0cb749dd0d32a62}\label{text_8h_af78e6d03fb1f2413a0cb749dd0d32a62}} 
+\index{text.h@{text.h}!lines\_cmp@{lines\_cmp}}
+\index{lines\_cmp@{lines\_cmp}!text.h@{text.h}}
+\doxysubsubsection{\texorpdfstring{lines\_cmp()}{lines\_cmp()}}
+{\footnotesize\ttfamily int lines\+\_\+cmp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{text_8h_a9841b4ee80533b062d59b35f9bd80ccf}{Line}}}]{str1,  }\item[{\mbox{\hyperlink{text_8h_a9841b4ee80533b062d59b35f9bd80ccf}{Line}}}]{str2,  }\item[{\mbox{\hyperlink{text_8h_a84723d244c272f0cc0523c54b1de178d}{is\+\_\+letter\+\_\+t}}}]{,  }\item[{\mbox{\hyperlink{text_8h_a5bdd61a9388ad20dedbcf5b4779eccef}{letters\+\_\+cmp\+\_\+t}}}]{ }\end{DoxyParamCaption})}
+
+This function is responsible for comparsion lines in lexicographical order ignoring all characters except letters 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em str1} & First line \\
+\hline
+\mbox{\texttt{ in}}  & {\em str2} & Second line \\
+\hline
+\mbox{\texttt{ in}}  & {\em is\+\_\+letter\+\_\+t} & Function that defines a letter in a line \\
+\hline
+\mbox{\texttt{ in}}  & {\em letters\+\_\+cmp\+\_\+t} & Function that compare two letterts \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Positive integer if str1 \char`\"{}more\char`\"{} than str2, negative integer otherwise and zero if they are the same 
+\end{DoxyReturn}
+\mbox{\Hypertarget{text_8h_a42240075e95fc1136dd8fd8345fba625}\label{text_8h_a42240075e95fc1136dd8fd8345fba625}} 
+\index{text.h@{text.h}!read\_text@{read\_text}}
+\index{read\_text@{read\_text}!text.h@{text.h}}
+\doxysubsubsection{\texorpdfstring{read\_text()}{read\_text()}}
+{\footnotesize\ttfamily int read\+\_\+text (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{text_8h_aaaf918c4e9a83699029d39b54b7df4a6}{Text}} $\ast$}]{text\+\_\+pointer,  }\item[{const char $\ast$}]{file\+\_\+name }\end{DoxyParamCaption})}
+
+This function is responsible for reading text from a file into memory 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em file\+\_\+name} & Input file name \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em text\+\_\+pointer} & A pointer to a variable that will hold the text \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Zero on success and error code otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{text_8h_a09618083b8df27caa78196c6af488a8d}\label{text_8h_a09618083b8df27caa78196c6af488a8d}} 
+\index{text.h@{text.h}!rev\_lines\_cmp@{rev\_lines\_cmp}}
+\index{rev\_lines\_cmp@{rev\_lines\_cmp}!text.h@{text.h}}
+\doxysubsubsection{\texorpdfstring{rev\_lines\_cmp()}{rev\_lines\_cmp()}}
+{\footnotesize\ttfamily int rev\+\_\+lines\+\_\+cmp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{text_8h_a9841b4ee80533b062d59b35f9bd80ccf}{Line}}}]{str1,  }\item[{\mbox{\hyperlink{text_8h_a9841b4ee80533b062d59b35f9bd80ccf}{Line}}}]{str2,  }\item[{\mbox{\hyperlink{text_8h_a84723d244c272f0cc0523c54b1de178d}{is\+\_\+letter\+\_\+t}}}]{,  }\item[{\mbox{\hyperlink{text_8h_a5bdd61a9388ad20dedbcf5b4779eccef}{letters\+\_\+cmp\+\_\+t}}}]{ }\end{DoxyParamCaption})}
+
+This function is responsible for comparsion lines in reverse lexicographical order ignoring all characters except letters 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em str1} & First line \\
+\hline
+\mbox{\texttt{ in}}  & {\em str2} & Second line \\
+\hline
+\mbox{\texttt{ in}}  & {\em is\+\_\+letter\+\_\+t} & Function that defines a letter in a line \\
+\hline
+\mbox{\texttt{ in}}  & {\em letters\+\_\+cmp\+\_\+t} & Function that compare two letterts \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Positive integer if str1 \char`\"{}more\char`\"{} than str2, negative integer otherwise and zero if they are the same 
+\end{DoxyReturn}
+\mbox{\Hypertarget{text_8h_a83acb3d9c928dbb06b2398b3a0bd557e}\label{text_8h_a83acb3d9c928dbb06b2398b3a0bd557e}} 
+\index{text.h@{text.h}!sort\_lines@{sort\_lines}}
+\index{sort\_lines@{sort\_lines}!text.h@{text.h}}
+\doxysubsubsection{\texorpdfstring{sort\_lines()}{sort\_lines()}}
+{\footnotesize\ttfamily void sort\+\_\+lines (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{text_8h_a9841b4ee80533b062d59b35f9bd80ccf}{Line}} $\ast$}]{lines,  }\item[{size\+\_\+t}]{lines\+\_\+amt,  }\item[{\mbox{\hyperlink{text_8h_a8f0df8fd28deafaa5a35555f06ab57c2}{lines\+\_\+cmp\+\_\+t}}}]{,  }\item[{\mbox{\hyperlink{text_8h_a84723d244c272f0cc0523c54b1de178d}{is\+\_\+letter\+\_\+t}}}]{,  }\item[{\mbox{\hyperlink{text_8h_a5bdd61a9388ad20dedbcf5b4779eccef}{letters\+\_\+cmp\+\_\+t}}}]{ }\end{DoxyParamCaption})}
+
+This function is responsible for sorting lines 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em lines} & A pointer to lines array that will be sorted \\
+\hline
+\mbox{\texttt{ in}}  & {\em lines\+\_\+amt} & Amount of lines in array \\
+\hline
+\mbox{\texttt{ in}}  & {\em lines\+\_\+cmp\+\_\+t} & Function that compare two lines \\
+\hline
+\mbox{\texttt{ in}}  & {\em is\+\_\+letter\+\_\+t} & Function that defines a letter in a line \\
+\hline
+\mbox{\texttt{ in}}  & {\em letters\+\_\+cmp\+\_\+t} & Function that compare two letterts \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{text_8h_ac80eb2ab88e6a3d83c5f024d48bdd9b5}\label{text_8h_ac80eb2ab88e6a3d83c5f024d48bdd9b5}} 
+\index{text.h@{text.h}!write\_text@{write\_text}}
+\index{write\_text@{write\_text}!text.h@{text.h}}
+\doxysubsubsection{\texorpdfstring{write\_text()}{write\_text()}}
+{\footnotesize\ttfamily int write\+\_\+text (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{text_8h_aaaf918c4e9a83699029d39b54b7df4a6}{Text}}}]{text,  }\item[{const char $\ast$}]{file\+\_\+name }\end{DoxyParamCaption})}
+
+This function is responsible for writing text into a file 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em file\+\_\+name} & Input file name \\
+\hline
+\mbox{\texttt{ in}}  & {\em text} & The text to be written \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Zero on success and error code otherwise 
+\end{DoxyReturn}
