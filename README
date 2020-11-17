@@ -2,12 +2,12 @@ To create a program, you need a Linux terminal or its alternative and the make u
 
 If you don't have make try
     
-    '$ sudo apt install make'
+    $ sudo apt install make
 
 
 Enter 
     
-    '$ make sorter' 
+    $ make sorter
 
 to make programs
 
@@ -17,11 +17,11 @@ sorter-en sorts texts in Russian and sorter-ru sorts texts in English
 
 To test the programs you can do
 
-    '$ ./sorter-en hamlet' 
+    $ ./sorter-en hamlet
 
 to sort Hamlet by Shakespeare or
 
-    '$ ./sorter-ru onegin' 
+    $ ./sorter-ru onegin
 
 to sort Evgeniy Onegin by Pushkin
 
